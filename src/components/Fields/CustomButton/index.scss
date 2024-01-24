@@ -1,0 +1,15 @@
+.custom-button {
+  width: 100%;
+  min-width: 60px;
+  height: 50px;
+  background-color: rgb(254,88,98);
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1400px){
+  .custom-button {
+    font-size: 13px;
+  }
+}

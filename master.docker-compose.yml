@@ -1,0 +1,6 @@
+services:
+  brokerSettlement-front-uat:
+    image: "banking/brokersettlement-front:latest"
+    container_name : "brokersettlement-front"
+    network_mode: "host"
+    restart: always

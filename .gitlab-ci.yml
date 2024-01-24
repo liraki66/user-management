@@ -1,0 +1,31 @@
+stages:
+  - test
+  - dockerize
+  - deploy
+
+variables:
+  project: "broker-settlement-frontend"
+
+test:
+  stage: test
+  script:
+    - "echo broker-settlement-frontend test was successfull"
+  only:
+  - master
+
+dockerize:
+  stage: dockerize
+  script:
+    - "docker build -t banking/brokersettlement-front:$CI_COMMIT_SHORT_SHA -f master.Dockerfile ."  
+  only:
+  - master
+
+deploy:
+  stage: deploy
+  script:
+    - "docker compose -f master.docker-compose.yml down"
+    - "sed -i 's/latest/$CI_COMMIT_SHORT_SHA/g' master.docker-compose.yml"
+    - "docker compose -f master.docker-compose.yml up -d"
+    - "yes | docker image prune || true"
+  only:
+  - master

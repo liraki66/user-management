@@ -1,0 +1,23 @@
+.title-section {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  border-bottom: 2px solid rgb(240,240,240);
+  min-width: 250px;
+  //width: max-content;
+  margin: 2rem 3rem 1.5rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  img {
+    margin-left: 15px;
+  }
+}
+
+
+@media screen and (max-width: 1400px){
+  .title-section {
+    font-size: 14px;
+    width: max-content;
+  }
+}

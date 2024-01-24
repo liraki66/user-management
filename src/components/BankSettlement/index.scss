@@ -1,0 +1,24 @@
+.bank-settlement {
+  &-items-wrapper {
+    margin-top: 3rem;
+    border-top: 1px dashed rgb(254,88,98);
+    padding-top: 2rem;
+    position: relative;
+  }
+  &-items-title {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: rgb(254,88,98);
+  }
+  &-items-balance {
+    position: absolute;
+    left: 7%;
+    top: 12px;
+    z-index: 999;
+    cursor: pointer;
+  }
+}

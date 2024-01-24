@@ -1,0 +1,44 @@
+.custom-text-input {
+  &-wrapper {
+    position: relative;
+    input {
+      height: 55px;
+      border-radius: 3px;
+      border: 2px solid #edecec;
+    }
+  }
+  &-label {
+    position: absolute;
+    top: -14px;
+    right: 10px;
+    background-color: #fff;
+    color: #807f7f;
+    width: fit-content;
+    height: fit-content;
+    z-index: 100;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
+.ant-input-affix-wrapper {
+  padding: 0 10px !important;
+  border-radius: 3px;
+  border: 2px solid #edecec;
+  height: 55px;
+  input {
+    height: 50px;
+    &:hover{
+      border: none;
+      box-shadow:none;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .custom-text-input {
+    &-label {
+      font-size: 10px;
+    }
+  }
+}
